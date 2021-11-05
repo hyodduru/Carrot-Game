@@ -26,9 +26,15 @@ body {
   border-radius: 10px;
   margin-bottom: 10px;
   font-size: 35px;
-  line-height: 60px;
+  padding-top: 4px;
+
+  transform: all 0.5s ease-in;
 }
 
+.start-btn:hover i {
+  transform: scale(1.1);
+  color: red;
+}
 .timer {
   border: black 5px solid;
   text-align: center;

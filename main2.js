@@ -30,9 +30,6 @@ gameField.appendChild(carrot)
 
 return carrot;}
 
-for(let i = 0; i<10; i++){
-    createCarrot();
-}
 
 
 function createBug(){
@@ -52,6 +49,10 @@ return bug;
 }
 
 
+for(let i = 0; i<10; i++){
+    createCarrot();
+}
+
 for(let i = 0; i<7; i++){
     createBug();
 }
@@ -59,8 +60,15 @@ for(let i = 0; i<7; i++){
 
 
 
-//Timer
-//const 
+//start btn Click event
+
+const startBtn = document.querySelector('.start-btn');
+
+startBtn.addEventListener('click',()=>{
+  location.reload();
+
+})
+
 
 
 
