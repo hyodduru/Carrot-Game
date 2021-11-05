@@ -1,4 +1,4 @@
-'use strict';
+
 // 1. game field 의 height 와 width를 알아온다.
 // 2. 그 범위 내에서 random한 x,y값을 구한다.
 // 3. 그 위치값을 각각의 item에 부여한다. 
@@ -49,28 +49,85 @@ return bug;
 }
 
 
-for(let i = 0; i<10; i++){
-    createCarrot();
-}
-
-for(let i = 0; i<7; i++){
-    createBug();
-}
 
 
+//playing 모드일 때, 아닐 때 구분해서 이벤트해주기 
 
-
-//start btn Click event
+let playing = false;
 
 const startBtn = document.querySelector('.start-btn');
+const timer = document.querySelector('.timer');
 
-startBtn.addEventListener('click',()=>{
-  location.reload();
+function startGame(){
+    playing = true;
+}
 
+function stopGame(){
+    playing = false;
+}
+
+
+function handleStartBtn(){
+    if(!playing){
+        startBtn.innerHTML = `<i class="fas fa-stop"></i>`
+        playing = true;
+      
+    }else{    
+        startBtn.innerHTML = `<i class="fas fa-play"></i>`;     
+        playing = false; 
+    }
+}
+
+
+function setTimer(){  
+        let sec = 10;
+    setInterval(()=>{
+        if(sec>=0&&playing){
+        timer.innerHTML = `0:${sec}`;
+        sec--; }else{
+            sec = 10; 
+            return          
+        }        
+    }, 1000)
+    }  
+
+
+ 
+
+//replay btn
+
+const replayBtn = document.querySelector('.replay-btn');
+const popUp = document.querySelector('.pop-up');
+
+replayBtn.addEventListener('click',()=>{
+    location.reload();
 })
 
+startBtn.addEventListener('click',handleStartBtn)
 
 
+setTimer();
+
+
+
+function createItems(){ 
+        
+        for(let i = 0; i<10; i++){
+            createCarrot();
+        }
+        
+        for(let i = 0; i<7; i++){
+            createBug();
+        }
+}
+//start버튼을 누름으로써 item들의 등장. 
+
+createItems();
+gameField.classList.add('hidden')
+
+startBtn.addEventListener('click',()=>{
+    gameField.classList.remove('hidden')
+})
 
 
 

@@ -6,6 +6,16 @@ body {
   background-color: black;
 }
 
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+button:hover i {
+  transform: scale(1.1);
+  color: red;
+}
+
 .entire-field {
   background: url("carrot/img/background.png") center/cover no-repeat;
   width: 950px;
@@ -31,10 +41,6 @@ body {
   transform: all 0.5s ease-in;
 }
 
-.start-btn:hover i {
-  transform: scale(1.1);
-  color: red;
-}
 .timer {
   border: black 5px solid;
   text-align: center;
@@ -62,18 +68,43 @@ body {
   line-height: 80px;
 }
 
-button {
-  all: unset;
-  cursor: pointer;
-}
-
 .game-field {
   position: relative;
-
-  width: 90%;
+  text-align: center;
+  width: 88%;
   height: 170px;
+  margin: auto;
 }
 
+.pop-up {
+  position: relative;
+  z-index: 1;
+  background-color: grey;
+  width: 60%;
+  height: 200px;
+  margin: auto;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 50px;
+  padding-top: 35px;
+  opacity: 0.8;
+}
+
+.hidden {
+  display: none;
+}
+
+.replay-btn {
+  border: 5px solid black;
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  background-color: beige;
+  padding-top: 5px;
+}
+.pop-up-msg {
+  color: white;
+}
 .carrot,
 .bug {
   cursor: pointer;
