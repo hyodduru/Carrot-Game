@@ -3,6 +3,7 @@
 // 2. 그 범위 내에서 random한 x,y값을 구한다.
 // 3. 그 위치값을 각각의 item에 부여한다. 
 
+//Random Arrangement
 const gameField = document.querySelector('.game-field');
 
 const fieldHeight = gameField.getBoundingClientRect().height;
@@ -57,6 +58,9 @@ for(let i = 0; i<7; i++){
 
 
 
+
+//Timer
+//const 
 
 
 
