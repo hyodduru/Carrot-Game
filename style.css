@@ -79,7 +79,7 @@ button:hover i {
 .pop-up {
   position: relative;
   z-index: 1;
-  background-color: grey;
+  background-color: rgb(43, 33, 33);
   width: 60%;
   height: 200px;
   margin: auto;
@@ -112,6 +112,10 @@ button:hover i {
   left: 0;
   top: 0;
   transition: all 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.1);
 }
 
 @media screen and (max-width: 750px) {
