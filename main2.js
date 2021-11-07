@@ -169,19 +169,11 @@ gameField.addEventListener('click',(event)=>{
     }
 })
 
-
-
-
-
-
 startBtn.addEventListener('click', handleStartBtn)
 
 startBtn.addEventListener('click',()=>{
     if(playing){reloadP();}
  })
-
-
-
 
 replayBtn.addEventListener('click',()=>{
     reloadP();   
